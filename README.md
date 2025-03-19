@@ -26,3 +26,35 @@ A feature-rich web audio player with real-time visualization using Web Audio API
 1. Clone the repo:
 ```bash
 git clone https://github.com/vishwas-r/audio-player-canvasjs-visualizer.git
+```
+2. Open in browser:
+```bash
+cd modern-web-audio-player
+open index.html
+```
+
+# Usage
+
+- Add your MP3 URLs in the `songs` array in `script.js`
+- Customize styling in `styles.css`
+- Host or open locally
+
+# Customization
+
+- Modify colors in `:root` CSS variables
+- Adjust visualization parameters in `analyzer.fftSize`
+- Add/remove playlist items
+- Change chart type (`column`, `line`, `area`)
+
+# Dependencies
+
+- [CanvasJS (CDN)](https://canvasjs.com/)
+- Web Audio API (native)
+
+# Contributing
+
+Pull requests welcome!
+
+# License
+
+[MIT](https://opensource.org/license/mit)
