@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Modern Web Audio Player with CanvasJS Visualization</title>
+	<meta name="title" content="Modern Web Audio Player with CanvasJS Visualization | Online Music Player">
+	<meta name="description" content="A feature-rich web audio player with playlist support, real-time audio visualization using CanvasJS and modern controls. Play MP3s directly in your browser with spectrum analyzer and progress controls.">
+	<meta name="keywords" content="web audio player, online music player, audio visualization, HTML5 audio player, JavaScript music player, CanvasJS">
+	<meta name="author" content="Vishwas R">
+	<meta name="robots" content="index, follow">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="Modern Web Audio Player with CanvasJS Visualization">
+	<meta property="og:description" content="Browser-based audio player with real-time spectrum visualization using CanvasJS and playlist management">
+	<meta property="og:image" content="assets/images/play-button.png">
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://yourdomain.com/player.html">
+	<meta property="twitter:title" content="Modern Web Audio Player with CanvasJS Visualization">
+	<meta property="twitter:description" content="Browser-based audio player with real-time spectrum visualization using CanvasJS and playlist management">
+	<meta property="twitter:image" content="assets/images/play-button.png">
+	<link rel="icon" type="image/png" href="assets/images/play-button.png" />
+
+	<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+	<link rel="stylesheet" href="assets/css/style.css"> 
+</head>
+<body>
+	<div class="container">
+		<div class="player-container">
+			<div class="controls">
+				<div class="current-song">
+					<img src="https://placehold.co/80" alt="Album Art" class="album-art">
+					<div>
+						<h3 id="songTitle">Select a song</h3>
+						<a id="songArtistCredit" href="#" target="_blank"><p id="songArtist">Artist</p></a>
+					</div>
+				</div>
+
+				<div class="player-controls">
+					<div class="time-info">
+						<span id="currentTime">0:00</span>
+						<span id="duration">0:00</span>
+					</div>
+					<div class="progress-bar" id="progressBar">
+						<div class="progress" id="progress"></div>
+                        <div id="chartContainer"></div>
+					</div>
+
+					<div class="buttons">
+						<button id="prevBtn">⏮</button>
+						<button class="play-pause" id="playPauseBtn">▶</button>
+						<button id="nextBtn">⏭</button>
+                        <div class="volume-control">
+                            <button id="muteBtn">🔊</button>
+                            <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1">
+                        </div>
+						<select id="visualizerType">
+							<option value="column">Bars</option>
+							<option value="splineArea">Area</option>
+							<option value="spline">Line</option>
+						</select>
+					</div>
+				</div>
+                <div id="visualizerChartContainer"></div>
+			</div>
+
+			<div class="playlist">
+				<h3>Playlist</h3>
+				<div class="song-list" id="playlist">
+					<!-- Songs will be populated by JavaScript -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
