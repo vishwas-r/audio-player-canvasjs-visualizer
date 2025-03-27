@@ -15,7 +15,6 @@ body {
     background-color: var(--background);
     color: var(--text);
     min-height: 100vh;
-    display: flex;
 }
 
 .container {
@@ -42,7 +41,7 @@ body {
 }
 
 .song-item {
-    display: flex;
+    display: ;
     align-items: center;
     padding: 1rem;
     margin: 0.5rem 0;
@@ -67,8 +66,8 @@ body {
 }
 
 .controls {
-    display: flex;
-    flex-direction: column;
+    display: ;
+    -direction: column;
     gap: 1.5rem;
 }
 
@@ -197,7 +196,8 @@ a:focus {
     text-decoration: none;
 }
 footer {
-    margin-top: auto;
+    padding: 2rem;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
